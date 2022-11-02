@@ -21,7 +21,7 @@ labelTitle.place(x=145, y=100)
 labelSub = Label(raiz, text="INGRESE Y HAGA SU PEDIDO", font=("Bebas Neue", 44), bg="snow", fg="RoyalBlue3")
 labelSub.place(x=260, y=540)
 
-def irCatalogo(*args):
+def irCatalogo():
     catalogo.initCat(raiz)
 
 
