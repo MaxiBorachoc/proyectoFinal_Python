@@ -18,7 +18,7 @@ def arranque(parent):
 
         botonAtras = Button(root, text="<-", width=12, height=3, bg="snow", command=functools.partial(volver, parent, root))
         botonAtras.place(x=900, y=600)
-    
+        
 def volver(parent, root):
     parent.deiconify()
     root.destroy()

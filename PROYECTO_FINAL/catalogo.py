@@ -6,6 +6,7 @@ import cat_arr
 import cat_alt
 import cat_luc
 
+
 def initCat(parent):
     parent.withdraw()
     root = Toplevel(parent)
