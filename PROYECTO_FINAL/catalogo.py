@@ -5,7 +5,7 @@ from PIL import Image, ImageTk
 import cat_arr
 import cat_alt
 import cat_luc
-
+import listas
 
 def initCat(parent):
     parent.withdraw()
@@ -37,15 +37,19 @@ def initCat(parent):
     imgLuc=Label(root, image=img_faro, bg="RoyalBlue3", width=300, height=150)
     imgLuc.place(x=620, y=550)
     
+
     def irArr():
+        
         cat_arr.arranque(root)
+       
 
     def irAlter():
         cat_alt.alter(root)
+       
 
     def irLuc():
         cat_luc.luces(root)
-
+       
          
     botonArranque = Button(root,text="MOTOR DE ARRANQUE", bg="IndianRed3", command=irArr, font=("Bebas Neue", 18), width=30)
     botonArranque.grid(row=1, column=0, pady=160, padx=140)

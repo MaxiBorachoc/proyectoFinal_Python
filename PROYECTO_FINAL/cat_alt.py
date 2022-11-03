@@ -14,8 +14,8 @@ def alter(parent):
 
     labelPedidoActual = Label(root, text="CATALOGO PARA ALTERNADOR", width=30, height=1, bg="RoyalBlue3", font=("Bebas Neue", 28), fg="IndianRed3")
     labelPedidoActual.grid(row=0, column=2, pady=50, padx=50)
-    
-    listas.combo(root)
+    ruta = "alter"
+    listas.combo(root, ruta)
     
     botonAtras = Button(root, text="<-", width=12, height=3, bg="snow", command=functools.partial(volver, parent, root))
     botonAtras.place(x=900, y=600)

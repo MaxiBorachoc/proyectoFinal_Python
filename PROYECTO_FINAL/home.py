@@ -1,6 +1,8 @@
 from tkinter import *
 import catalogo
 from PIL import Image, ImageTk
+import listas
+from tkinter import messagebox
 
 raiz = Tk()
 raiz.geometry('1000x700')
@@ -9,7 +11,7 @@ raiz.resizable(False, False)
 raiz.config(bg="snow")
 raiz.iconbitmap('PROYECTO_FINAL/assets/carrito.ico')
 
-
+pedido = listas.pedido
 
 imgFondo = Image.open("PROYECTO_FINAL/assets/fondo.png")
 img_fondo=ImageTk.PhotoImage(imgFondo)
@@ -30,8 +32,11 @@ def irCatalogo():
 botonCatalogo = Button(raiz,text="VER CATÁLOGO", width=30, height=5, bg="RoyalBlue3", font=("Bebas Neue", 12), command=irCatalogo)
 botonCatalogo.grid(row=0, column=0, pady=320, padx=110)
 
+def ultPed():
+    messagebox.showinfo("ULTIMO PEDIDO", pedido)
 
-botonUltPedido = Button(raiz,text="ÚLTIMO PEDIDO", width=30, height=5, bg="RoyalBlue3", font=("Bebas Neue", 12))
+
+botonUltPedido = Button(raiz,text="ÚLTIMO PEDIDO", width=30, height=5, bg="RoyalBlue3", font=("Bebas Neue", 12), command=ultPed)
 botonUltPedido.grid(row=0, column=1, pady=300)
 
 cuadro = LabelFrame(raiz, width=30, height=5, bg="snow")
