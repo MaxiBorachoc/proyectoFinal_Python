@@ -11,6 +11,7 @@ def luces(parent):
     root.geometry('1000x700')
     root.config(bg="RoyalBlue3")
     root.protocol("WM_DELETE_WINDOW", functools.partial(volver, parent, root))
+    root.iconbitmap('PROYECTO_FINAL/assets/carrito.ico')
     botonAtras = Button(root, text="<-", width=12, height=3, bg="snow")
     botonAtras.place(x=900, y=600)
 

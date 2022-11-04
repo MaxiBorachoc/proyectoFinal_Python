@@ -7,6 +7,7 @@ def alter(parent):
     parent.withdraw()
     root = Toplevel(parent)
     root.geometry('1000x700')
+    root.iconbitmap('PROYECTO_FINAL/assets/carrito.ico')
     root.config(bg="RoyalBlue3")
     root.protocol("WM_DELETE_WINDOW", functools.partial(volver, parent, root))
     botonAtras = Button(root, text="<-", width=12, height=3, bg="snow")

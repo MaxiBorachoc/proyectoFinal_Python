@@ -8,6 +8,7 @@ def arranque(parent):
         root = Toplevel(parent)
         root.geometry('1000x700')
         root.config(bg="RoyalBlue3")
+        root.iconbitmap('PROYECTO_FINAL/assets/carrito.ico')
         root.protocol("WM_DELETE_WINDOW", functools.partial(volver, parent, root))
         botonAtras = Button(root, text="<-", width=12, height=3, bg="snow")
         botonAtras.place(x=900, y=600)
