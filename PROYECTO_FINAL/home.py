@@ -7,7 +7,7 @@ from tkinter import messagebox
 raiz = Tk()
 raiz.geometry('650x450')
 raiz.title("CATALOGO DE PRODUCTOS")
-raiz.resizable(False, False)
+##raiz.resizable(False, False)
 raiz.config(bg="snow")
 raiz.iconbitmap('PROYECTO_FINAL/assets/carrito.ico')
 

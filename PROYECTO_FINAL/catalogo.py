@@ -11,7 +11,7 @@ def initCat(parent):
     parent.withdraw()
     root = Toplevel(parent)
     root.geometry('650x450')
-    root.resizable(False, False)
+    ##root.resizable(False, False)
     root.title("CATALOGO DE PRODUCTOS")
     root.config(bg="RoyalBlue3")
     root.iconbitmap('PROYECTO_FINAL/assets/carrito.ico')
