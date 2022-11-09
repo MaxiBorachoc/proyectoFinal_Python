@@ -6,20 +6,18 @@ import listas
 def arranque(parent):
         parent.withdraw()
         root = Toplevel(parent)
-        root.geometry('1000x700')
+        root.geometry('750x450')
         root.config(bg="RoyalBlue3")
         root.iconbitmap('PROYECTO_FINAL/assets/carrito.ico')
         root.protocol("WM_DELETE_WINDOW", functools.partial(volver, parent, root))
-        botonAtras = Button(root, text="<-", width=12, height=3, bg="snow")
-        botonAtras.place(x=900, y=600)
-
+   
         labelPedidoActual = Label(root, text="CATALOGO PARA MOTOR DE ARRANQUE", width=30, height=1, bg="RoyalBlue3", font=("Bebas Neue", 28), fg="IndianRed3")
-        labelPedidoActual.grid(row=0, column=2, pady=50, padx=50)
+        labelPedidoActual.grid(row=0, column=1, padx=0, pady=10)
         ruta = "arranque"
         listas.combo(root, ruta)
 
-        botonAtras = Button(root, text="<-", width=12, height=3, bg="snow", command=functools.partial(volver, parent, root))
-        botonAtras.place(x=900, y=600)
+        botonAtras = Button(root, text="<-", width=8, height=2, bg="snow", command=functools.partial(volver, parent, root))
+        botonAtras.place(x=660, y=390)
         
 def volver(parent, root):
     parent.deiconify()

@@ -26,7 +26,7 @@ def combo(root, ruta):
 
 
     lista2=Label(root, text="MODELO", font=("Bebas Neue", 22), bg="RoyalBlue3")
-    lista2.grid(row=1, column=1)
+    lista2.grid(row=1, column=0)
  
     opcion_model=StringVar()
     model=("Fiat", "Volkswagen", "Peugeot", "Ford", "Toyota")
@@ -35,7 +35,7 @@ def combo(root, ruta):
     def cuenta(event):
         if comboAnio.get()!="" and comboTipo.get()!="" and comboMarca.get()!="":
             botonPedir = Button(root, text="Añadir al pedido", width=15, height=4, bg="medium sea green", command=añadir)
-            botonPedir.place(x=425, y=590)
+            botonPedir.place(x=310, y=370)
 
 
    
@@ -63,8 +63,8 @@ def combo(root, ruta):
 
 
     def combobox(model_tipo):
-         comboModel_2=ttk.Combobox(root, width=30, textvariable=opcion_model_tipo, values=model_tipo)
-         comboModel_2.grid(row=1, column=3)
+         comboModel_2=ttk.Combobox(root, width=20, textvariable=opcion_model_tipo, values=model_tipo)
+         comboModel_2.grid(row=1, column=2, padx=0)
          comboModel_2.bind("<<ComboboxSelected>>", cuenta)
          
         
@@ -74,45 +74,45 @@ def combo(root, ruta):
     
     
 
-    comboModel=ttk.Combobox(root, width=30, textvariable=opcion_model, values=model)
+    comboModel=ttk.Combobox(root, width=20, textvariable=opcion_model, values=model)
     comboModel.current(0)
-    comboModel.grid(row=1, column=2)
+    comboModel.grid(row=1, column=1)
     comboModel.bind("<<ComboboxSelected>>", cambia)
 
         
 
     lista1=Label(root, text="TIPO", font=("Bebas Neue", 22), bg="RoyalBlue3")
-    lista1.grid(row=3, column=1,padx=80, pady=10)
+    lista1.grid(row=4, column=0,padx=20, pady=10)
 
 
     opcion_marca=StringVar()
    
-    comboMarca=ttk.Combobox(root, width=30, textvariable=opcion_marca, values=marca)
+    comboMarca=ttk.Combobox(root, width=20, textvariable=opcion_marca, values=marca)
     comboMarca.current(0)
-    comboMarca.grid(row=4, column=2)
+    comboMarca.grid(row=4, column=1)
 
     lista2=Label(root, text="MARCA", font=("Bebas Neue", 22), bg="RoyalBlue3")
-    lista2.grid(row=4, column=1,padx=80, pady=10)
+    lista2.grid(row=3, column=0,padx=30, pady=10)
 
     opcion_tipo=StringVar()
     
 
-    comboTipo=ttk.Combobox(root, width=30, textvariable=opcion_tipo, values=tipo)
+    comboTipo=ttk.Combobox(root, width=20, textvariable=opcion_tipo, values=tipo)
     comboTipo.current(0)
-    comboTipo.grid(row=3, column=2)
+    comboTipo.grid(row=3, column=1)
 
     lista2=Label(root, text="AÑO", font=("Bebas Neue", 22), bg="RoyalBlue3")
-    lista2.grid(row=2, column=1,padx=80, pady=10)
+    lista2.grid(row=2, column=0,padx=30, pady=10)
 
     opcion=StringVar()
     anio=("1990-95", "1996-00", "2001-05", "2006-2010", "2011-15", "2016-2022")
 
-    comboAnio=ttk.Combobox(root, width=30, textvariable=opcion, values=anio)
+    comboAnio=ttk.Combobox(root, width=20, textvariable=opcion, values=anio)
     comboAnio.current(0)
-    comboAnio.grid(row=2, column=2)
+    comboAnio.grid(row=2, column=1)
 
     cuadro_añadir = LabelFrame(root, width=7, height=4, bg="snow", bd=".5px")
-    cuadro_añadir.place(x=425, y=590)
+    cuadro_añadir.place(x=310, y=370)
 
     labelPedir = Label(cuadro_añadir, text="Añadir al pedido", width=15, height=4, bg="gray75", font=("", 9))
     labelPedir.pack()
@@ -136,5 +136,5 @@ def combo(root, ruta):
     global contador
     contador = IntVar(value=0)
 
-    botonCarrito = Button(root, textvariable=contador, width=5, height=2, bg="snow", font=("", 14))
-    botonCarrito.place(x=6, y=600)
+    botonCarrito = Button(root, textvariable=contador, width=3, height=1, bg="snow", font=("", 14))
+    botonCarrito.place(x=6, y=390)

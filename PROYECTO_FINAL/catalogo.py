@@ -10,7 +10,7 @@ import listas
 def initCat(parent):
     parent.withdraw()
     root = Toplevel(parent)
-    root.geometry('1000x700')
+    root.geometry('650x450')
     root.resizable(False, False)
     root.title("CATALOGO DE PRODUCTOS")
     root.config(bg="RoyalBlue3")
@@ -25,17 +25,17 @@ def initCat(parent):
     img_arr= ImageTk.PhotoImage(img2)
     img_faro= ImageTk.PhotoImage(img3)
 
-    labelTitle = Label(root, text="SELECCIONE EL TIPO DE PRODUCTO", font=("Bebas Neue", 44), bg="RoyalBlue3", fg="IndianRed3")
-    labelTitle.place(x=175, y=30)
+    labelTitle = Label(root, text="SELECCIONE EL TIPO DE PRODUCTO", font=("Bebas Neue", 36), bg="RoyalBlue3", fg="IndianRed3")
+    labelTitle.place(x=85, y=20)
 
     imgArr=Label(root, image=img_arr, bg="RoyalBlue3")
-    imgArr.place(x=640, y=130)
+    imgArr.place(x=380, y=85)
 
     imgAlter=Label(root, image=img_alter, bg="RoyalBlue3")
-    imgAlter.place(x=640, y=340)
+    imgAlter.place(x=380, y=225)
 
     imgLuc=Label(root, image=img_faro, bg="RoyalBlue3", width=300, height=150)
-    imgLuc.place(x=620, y=550)
+    imgLuc.place(x=280, y=335)
     
 
     def irArr():
@@ -51,19 +51,19 @@ def initCat(parent):
         cat_luc.luces(root)
        
          
-    botonArranque = Button(root,text="MOTOR DE ARRANQUE", bg="IndianRed3", command=irArr, font=("Bebas Neue", 18), width=30)
-    botonArranque.grid(row=1, column=0, pady=160, padx=140)
+    botonArranque = Button(root,text="MOTOR DE ARRANQUE", bg="IndianRed3", command=irArr, font=("Bebas Neue", 14), width=25)
+    botonArranque.grid(row=1, column=0, pady=105, padx=80)
 
-    botonAlter = Button(root,text="ALTERNADOR",  bg="IndianRed3", command=irAlter, font=("Bebas Neue", 18), width=30)
-    botonAlter.grid(row=2, column=0, padx=140)
-
-
-    botonLuces = Button(root, text="LUCES", bg="IndianRed3", command=irLuc, font=("Bebas Neue", 18), width=30)
-    botonLuces.grid(row=3, column=0, pady=150, padx=140)
+    botonAlter = Button(root,text="ALTERNADOR",  bg="IndianRed3", command=irAlter, font=("Bebas Neue", 14), width=25)
+    botonAlter.grid(row=2, column=0, padx=80)
 
 
-    botonAtras = Button(root, text="<-", width=12, height=3, bg="snow", command=functools.partial(volver, parent, root))
-    botonAtras.place(x=900, y=600)
+    botonLuces = Button(root, text="LUCES", bg="IndianRed3", command=irLuc, font=("Bebas Neue", 14), width=25)
+    botonLuces.grid(row=3, column=0, padx=80, pady=105)
+
+
+    botonAtras = Button(root, text="<-", width=8, height=2, bg="snow", command=functools.partial(volver, parent, root))
+    botonAtras.place(x=560, y=390)
    
     
     root.mainloop()
