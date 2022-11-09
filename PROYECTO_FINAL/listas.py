@@ -82,7 +82,7 @@ def combo(root, ruta):
         
 
     lista1=Label(root, text="TIPO", font=("Bebas Neue", 22), bg="RoyalBlue3")
-    lista1.grid(row=4, column=0,padx=20, pady=10)
+    lista1.grid(row=3, column=0,padx=20, pady=10)
 
 
     opcion_marca=StringVar()
@@ -92,7 +92,7 @@ def combo(root, ruta):
     comboMarca.grid(row=4, column=1)
 
     lista2=Label(root, text="MARCA", font=("Bebas Neue", 22), bg="RoyalBlue3")
-    lista2.grid(row=3, column=0,padx=30, pady=10)
+    lista2.grid(row=4, column=0,padx=30, pady=10)
 
     opcion_tipo=StringVar()
     
